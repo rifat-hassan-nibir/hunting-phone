@@ -1,5 +1,5 @@
-const loadPhones = async () => {
-  const response = await fetch("https://openapi.programming-hero.com/api/phones?search=iphone");
+const loadPhones = async (searchText) => {
+  const response = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
   const data = await response.json();
   const phones = data.data;
   displayPhones(phones);
@@ -7,18 +7,29 @@ const loadPhones = async () => {
 
 const displayPhones = (phones) => {
   const phonesContainer = document.getElementById("phones-container");
-  phones.forEach((phone) => {
-    console.log(phone);
-    const phonesDiv = document.createElement("div");
-    phonesDiv.classList = `text-center lg:space-y-[20px] space-y-[10px] border-2 border-[#CFCFCF] lg:p-[25px] p-[20px]           rounded-lg`;
-    phonesDiv.innerHTML = `
-      <img class="mx-auto" src="${phone.image}" alt="" />
-      <h3 class="lg:text-[25px] text-[18px] font-bold text-[#403F3F]">${phone.phone_name}</h3>
-      <a class="lg:text-[20px] text-[16px] font-semibold inline-block bg-theme-color text-white py-[10px] px-[20px] rounded-lg"
-      >Show Details</a>
-    `;
-    phonesContainer.appendChild(phonesDiv);
-  });
+
+  // show all button
+  const showAllButton = document.getElementById("show-all-button");
+
+  // clearing container before appending phones
+  phonesContainer.innerHTML = ``;
+
+  if (phones.length > 10) {
+    phones = phones.slice(0, 10);
+    showAllButton.classList.remove("hidden");
+
+    // Showing the phones on ui
+    phones.forEach((phone) => {
+      showPhoneOnUi(phone);
+    });
+  } else {
+    showAllButton.classList.add("hidden");
+  }
 };
 
-loadPhones();
+// Search Fuctionality
+
+const handleSearch = () => {
+  const searchText = document.getElementById("search-field").value;
+  loadPhones(searchText);
+};

@@ -63,8 +63,8 @@
           <a
             class="inline-block lg:text-[20px] text-[16px] font-bold text-white rounded-lg lg:px-[35px] px-[28px] lg:py-[17px] py-[10px] bg-theme-color"
             href="#search-field"
-            >Buy Now</a
-          >
+            >Buy Now
+          </a>
         </div>
       </div>
     </header>
@@ -88,6 +88,7 @@
           placeholder="Search your phone"
         />
         <button
+          onclick="handleSearch()"
           id="search-button"
           class="lg:text-[20px] text-[16px] lg:py-[17px] py-[15px] lg:px-[40px] px-[25px] font-bold text-white bg-theme-color rounded-r-lg"
         >
@@ -96,7 +97,10 @@
       </div>
 
       <!-- Showing Phones -->
-      <section id="phones-container" class="grid lg:grid-cols-3 grid-cols-1 lg:gap-6 gap-5 mb-[80px]">
+      <section
+        id="phones-container"
+        class="grid lg:grid-cols-3 grid-cols-1 lg:gap-6 gap-5 lg:mb-[80px] mb-[40px]"
+      >
         <div
           class="text-center lg:space-y-[20px] space-y-[10px] border-2 border-[#CFCFCF] lg:p-[25px] p-[20px] rounded-lg"
         >
@@ -109,6 +113,15 @@
           >
         </div>
       </section>
+
+      <!-- Show all button -->
+      <div class="text-center mb-[100px]">
+        <a
+          id="show-all-button"
+          class="inline-block lg:text-[20px] text-[16px] font-bold text-white rounded-lg lg:px-[35px] px-[28px] lg:py-[17px] py-[10px] bg-theme-color hidden"
+          >Show All
+        </a>
+      </div>
     </main>
     <footer class="lg:px-[150px] px-[15px] bg-[#0d6efd0d] lg:py-[80px] py-[30px] text-center">
       <h2 class="lg:text-[45px] text-[24px] font-semibold">Hunting Phone</h2>
@@ -117,5 +130,6 @@
 
     <!-- JS scripts -->
     <script src="scripts/phone.js"></script>
+    <script src="scripts/utilities.js"></script>
   </body>
 </html>
