@@ -12,10 +12,84 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Custom Styles -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "theme-color": "#0D6EFD",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header></header>
-    <body></body>
+  <body class="font-poppins">
+    <header class="bg-[#0d6efd0d]">
+      <!-- Navigation -->
+      <div class="lg:px-[150px] px-[15px] lg:pt-[50px] pt-5 lg:pb-[364px] pb-[190px]">
+        <nav class="flex justify-between items-center lg:pb-[70px] pb-[40px]">
+          <h3 class="lg:text-[25px] text-20px font-bold">Hunting Phones</h3>
+          <a
+            href="#"
+            class="lg:text-[20px] text-[14px] font-bold lg:py-[17px] py-[10px] lg:px-[41px] px-[30px] bg-theme-color text-white rounded-lg"
+            >Sign Up</a
+          >
+        </nav>
+
+        <!-- Title -->
+        <h1 class="lg:text-[65px] text-[32px] text-[#100F0F] font-bold text-center lg:pb-6 pb-3">
+          Apple Iphone 13 Pro Max
+        </h1>
+        <p
+          class="max-w-[738px] mx-auto text-center lg:mb-[32px] mb-[18px] lg:px-0 px-5 text-[#706F6F] text-[18px]"
+        >
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+          alteration in some form, by injected humou.
+        </p>
+        <div class="text-center">
+          <a
+            class="inline-block lg:text-[20px] text-[14px] font-bold text-white rounded-lg lg:px-[35px] px-[25px] lg:py-[17px] py-[10px] bg-theme-color"
+            href="#"
+            >Buy Now</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="lg:px-[150px] px-[15px]">
+      <!-- Banner -->
+      <div class="mb-[120px]">
+        <img class="mx-auto lg:-mt-[330px] -mt-[170px]" src="images/Group 48095420.png" alt="" />
+      </div>
+
+      <h2 class="text-[35px] font-semibold text-[#100F0F] text-center mb-[30px]">Search Your Phone</h2>
+
+      <div class="flex justify-center mb-[50px]">
+        <input
+          class="w-[50%] bg-[#100f0f0d] text-[#706F6F] py-[17px] text-[20px] px-[30px] rounded-l-lg"
+          type="text"
+          placeholder="Search your phone"
+        />
+        <button class="text-[20px] py-[17px] px-[40px] font-bold text-white bg-theme-color rounded-r-lg">
+          Search
+        </button>
+      </div>
+
+      <!-- Showing Phones -->
+    </main>
     <footer></footer>
 
     <!-- JS scripts -->
