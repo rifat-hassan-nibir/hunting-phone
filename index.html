@@ -96,6 +96,11 @@
         </button>
       </div>
 
+      <!-- Loader -->
+      <section id="loader" class="text-center hidden">
+        <span class="loading loading-spinner loading-lg"></span>
+      </section>
+
       <!-- Showing Phones -->
       <section
         id="phones-container"
@@ -116,11 +121,13 @@
 
       <!-- Show all button -->
       <div class="text-center mb-[100px]">
-        <a
+        <button
+          onclick="showAllFunc()"
           id="show-all-button"
           class="inline-block lg:text-[20px] text-[16px] font-bold text-white rounded-lg lg:px-[35px] px-[28px] lg:py-[17px] py-[10px] bg-theme-color hidden"
-          >Show All
-        </a>
+        >
+          Show All
+        </button>
       </div>
     </main>
     <footer class="lg:px-[150px] px-[15px] bg-[#0d6efd0d] lg:py-[80px] py-[30px] text-center">

@@ -1,3 +1,5 @@
+// Showing phones on ui
+
 const showPhoneOnUi = (phone) => {
   const phonesContainer = document.getElementById("phones-container");
   const phonesDiv = document.createElement("div");
@@ -9,4 +11,14 @@ const showPhoneOnUi = (phone) => {
         >Show Details</a>
       `;
   phonesContainer.appendChild(phonesDiv);
+};
+
+// loader
+const loader = (isLoading) => {
+  const loader = document.getElementById("loader");
+  if (isLoading) {
+    loader.classList.remove("hidden");
+  } else {
+    loader.classList.add("hidden");
+  }
 };
