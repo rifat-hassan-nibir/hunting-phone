@@ -7,6 +7,7 @@ const loadPhones = async (searchText, isShowAll) => {
 
 // show all button
 const showAllButton = document.getElementById("show-all-button");
+const noPhonesFound = document.getElementById("no-phones-found");
 
 const displayPhones = (phones, isShowAll) => {
   const phonesContainer = document.getElementById("phones-container");
@@ -15,11 +16,19 @@ const displayPhones = (phones, isShowAll) => {
   phonesContainer.innerHTML = ``;
 
   // Show all phones
-  if (isShowAll) {
+  if (phones.length) {
+    if (isShowAll) {
+      showAllButton.classList.add("hidden");
+    } else if (!isShowAll && phones.length > 9) {
+      showAllButton.classList.remove("hidden");
+      noPhonesFound.classList.add("hidden");
+      phones = phones.slice(0, 9);
+    }
+  } else {
+    noPhonesFound.classList.remove("hidden");
+
+    loader(false);
     showAllButton.classList.add("hidden");
-  } else if (!isShowAll && phones.length > 9) {
-    showAllButton.classList.remove("hidden");
-    phones = phones.slice(0, 9);
   }
 
   // Showing the phones on ui
