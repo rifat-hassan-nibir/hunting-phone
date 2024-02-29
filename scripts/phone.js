@@ -55,6 +55,7 @@ const loadSinglePhoneDetails = async (id) => {
 const showSinglePhoneDetails = (phoneDetails) => {
   console.log(phoneDetails);
   const modalContainer = document.getElementById("my_modal_5");
+  modalContainer.innerHTML = ``;
   const modalDiv = document.createElement("div");
   modalDiv.classList.add("modal-box");
   modalDiv.innerHTML = `
