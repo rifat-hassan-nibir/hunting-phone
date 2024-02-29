@@ -7,8 +7,8 @@ const showPhoneOnUi = (phone) => {
   phonesDiv.innerHTML = `
         <img class="mx-auto" src="${phone.image}" alt="" />
         <h3 class="lg:text-[25px] text-[16px] font-bold text-[#403F3F]">${phone.phone_name}</h3>
-        <a class="lg:text-[20px] text-[14px] font-semibold inline-block bg-theme-color text-white py-[10px] px-[20px] rounded-lg"
-        >Show Details</a>
+        <button onclick="loadSinglePhoneDetails('${phone.slug}')" class="lg:text-[20px] text-[14px] font-semibold inline-block bg-theme-color text-white py-[10px] px-[20px] rounded-lg"
+        >Show Details</button>
       `;
   phonesContainer.appendChild(phonesDiv);
 };
