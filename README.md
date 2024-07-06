@@ -1,6 +1,6 @@
 # Hunting Phone
 
-Phone searching website
+Phone searching application
 
 ### Live Site:
 <p>https://rifat-hassan-nibir.github.io/hunting-phone/</p>
