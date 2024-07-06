@@ -3,7 +3,7 @@
 Phone searching website
 
 ### Live Site:
-<p>https://rifat-hassan-nibir.github.io/</p>
+<p>https://rifat-hassan-nibir.github.io/hunting-phone/</p>
 
 ### Key Features:
 - Users can easily search for different phone models using the search bar provided, which dynamically updates the search results.
